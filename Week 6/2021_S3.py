@@ -13,7 +13,7 @@ for x in range(numFriends):
 	right = max(right, friends[x][0])
 	left = min(left, friends[x][0])
 
-mid = (left + right) / 2
+mid = (left + right) // 2
 
 def calculateTime(pos):
 	totalTime = 0
@@ -32,10 +32,10 @@ while True:
 	#Compare times and directions to move along the number line
 	if leftTime < currentTime:
 		right = mid
-		mid = (left + mid) / 2
+		mid = (left + mid) // 2
 	elif rightTime < currentTime:
 		left = mid
-		mid = (right + mid) / 2
+		mid = (right + mid) // 2
 	else:
 		print(int(currentTime))
 		break
